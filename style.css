@@ -490,6 +490,12 @@ html.is-loading {
   object-fit: cover;
   object-position: center top;
   filter: grayscale(1) contrast(1.05);
+  transition: filter 0.8s var(--ease);
+}
+
+/* When the cursor is over the portrait, show it in full colour */
+.hero-media:hover img {
+  filter: grayscale(0) contrast(1);
 }
 
 /* Placeholder silhouette shown behind the image until a photo is added */
