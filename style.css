@@ -516,6 +516,13 @@ html.is-loading {
   position: relative;
   z-index: 1;
   padding-bottom: clamp(48px, 8vh, 96px);
+  pointer-events: none; /* let the mouse pass through to the photo */
+}
+
+/* keep the text and buttons clickable */
+.hero-copy,
+.hero-copy * {
+  pointer-events: auto;
 }
 
 .hero-copy {
