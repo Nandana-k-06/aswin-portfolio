@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <title>Aswin | Graphic Designer</title>
+  <meta name="description" content="Aswin is a graphic designer creating brand identities, posters, packaging, editorial work and photo manipulation. View selected works and get in touch.">
+  <meta name="theme-color" content="#F6F1E7">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aswin | Graphic Designer">
+  <meta property="og:description" content="Designing visual stories through brand identity, print, packaging and digital design.">
+  <link rel="canonical" href="https://www.your-domain.com/">
+
+  <!-- Favicon (inline SVG, no extra file needed) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23151310'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23F6F1E7' font-family='Georgia,serif'%3EA%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts: Playfair Display (headings) and Manrope (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Runs before paint: applies saved theme, marks JS as enabled, and decides whether to show the intro preloader -->
+  <script>
+    (function () {
+      var html = document.documentElement;
+      html.classList.add('js');
+      try {
+        html.dataset.theme = localStorage.getItem('aswinTheme') || 'light';
+      } catch (e) {
+        html.dataset.theme = 'light';
+      }
+      try {
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!sessionStorage.getItem('aswinIntro') && !reduce) {
+          html.classList.add('is-loading');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Typographic preloader (shown once per browser session) -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-word">
+      <span>A</span><span>S</span><span>W</span><span>I</span><span>N</span>
+    </div>
+  </div>
+
+  <!-- Custom cursor (desktop with a fine pointer only) -->
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#home" class="brand" aria-label="Aswin, back to top">Aswin</a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+          <!-- Sun icon (shown in dark mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M12 2.5v2.2M12 19.3v2.2M4.7 4.7l1.6 1.6M17.7 17.7l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.7 19.3l1.6-1.6M17.7 6.3l1.6-1.6"/>
+          </svg>
+          <!-- Moon icon (shown in light mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+          </svg>
+        </button>
+
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Open menu</span>
+          <span class="bars" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ SECTION 1: HOME ============ -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <p class="hero-wordmark" aria-hidden="true">ASWIN</p>
+
+      <figure class="hero-media" data-parallax>
+        <!-- Shown until a real portrait is added at assets/images/aswin-portrait.jpg -->
+        <div class="portrait-fallback" aria-hidden="true">
+          <svg viewBox="0 0 200 250" focusable="false">
+            <circle cx="100" cy="88" r="44"/>
+            <path d="M22 250c6-56 36-84 78-84s72 28 78 84z"/>
+          </svg>
+        </div>
+        <img src="assets/images/aswin-portrait.jpg" alt="Portrait of Aswin, graphic designer" width="800" height="1000" fetchpriority="high">
+      </figure>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title" class="hero-title">
+            <span>Designing</span>
+            <span>Visual</span>
+            <span>Stories.</span>
+          </h1>
+          <p class="hero-intro">
+            I am Aswin, a graphic designer making brand identities, posters, packaging and editorial work that turns ideas into stories people remember.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-solid" href="#works">Explore My Work</a>
+            <p class="availability">
+              <span class="dot" aria-hidden="true"></span>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Small floating design elements (decorative) -->
+      <span class="float float-ring" aria-hidden="true"></span>
+      <span class="float float-square" aria-hidden="true"></span>
+      <span class="float float-chip" aria-hidden="true">Typography</span>
+    </section>
+
+    <!-- ============ SECTION 2: ABOUT ============ -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <h2 id="about-title" class="section-title" data-reveal>About me</h2>
+
+        <p class="about-statement" data-reveal>
+          Good design should feel inevitable, as if it could never have looked any other way.
+        </p>
+
+        <div class="about-body" data-reveal>
+          <p>
+            My work begins with listening. Before I open a single application, I want to understand who a brand is talking to, what it wants them to feel, and what it must never be mistaken for.
+          </p>
+          <p>
+            I treat every project as a story with a beginning, a turn and a clear ending. Type, colour and composition are the tools I use to make that story easy to follow, whether it is a poster seen from across the street or a label read in a shop aisle.
+          </p>
+        </div>
+
+        <dl class="about-facts" data-reveal>
+          <div>
+            <dt>Focus</dt>
+            <dd>Brand identity, print and packaging</dd>
+          </div>
+          <div>
+            <dt>Experience</dt>
+            <dd>Three years across agencies and in-house studios</dd>
+          </div>
+          <div>
+            <dt>Working style</dt>
+            <dd>Remote or on-site, with clear weekly updates</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3: SERVICES ============ -->
+    <section id="services" class="section" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="services-title" class="section-title">Services</h2>
+          <p>Six disciplines, one point of view. Each one is shaped around what the work needs to do in the world.</p>
+        </div>
+
+        <ul class="service-list" data-reveal>
+          <li class="service">
+            <h3>Brand Identity and Logo Design</h3>
+            <p>Marks, colour and type systems, and guidelines that keep a brand consistent for years.</p>
+            <p class="service-tags">Logo suite, colour and type, guidelines</p>
+          </li>
+          <li class="service">
+            <h3>Poster and Advertisement Design</h3>
+            <p>Campaigns built to be understood in a single glance, from print to outdoor formats.</p>
+            <p class="service-tags">Posters, print ads, outdoor layouts</p>
+          </li>
+          <li class="service">
+            <h3>Social Media Design</h3>
+            <p>Feed systems and story sets that feel like one brand, post after post.</p>
+            <p class="service-tags">Templates, story sets, campaign assets</p>
+          </li>
+          <li class="service">
+            <h3>Packaging Design</h3>
+            <p>Shelf presence, tactile detail and print-ready files that survive the production line.</p>
+            <p class="service-tags">Product packs, labels, dielines</p>
+          </li>
+          <li class="service">
+            <h3>Editorial and Print Design</h3>
+            <p>Magazines, catalogues and reports with a clear reading order and generous white space.</p>
+            <p class="service-tags">Magazines, catalogues, annual reports</p>
+          </li>
+          <li class="service">
+            <h3>Creative Photo Manipulation</h3>
+            <p>Conceptual composites and surreal key visuals that stop people mid-scroll.</p>
+            <p class="service-tags">Concept composites, retouching, key visuals</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 4: SELECTED WORKS ============ -->
+    <section id="works" class="section works" aria-labelledby="works-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="works-title" class="section-title">Selected works</h2>
+          <p>Ten projects across identity, print, packaging and digital. Open any project to see the full process.</p>
+        </div>
+      </div>
+
+      <div class="container works-toolbar">
+        <div class="filters" id="filters" role="group" aria-label="Filter projects by category"></div>
+        <div class="gallery-nav">
+          <button type="button" id="gallery-prev" aria-label="Scroll to previous projects">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <button type="button" id="gallery-next" aria-label="Scroll to next projects">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="works-track" id="works-track" tabindex="0" role="region" aria-label="Project gallery, scroll sideways to browse"></div>
+    </section>
+
+    <!-- ============ SKILLS AND TOOLS ============ -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="skills-title" class="section-title">Skills and tools</h2>
+          <p>The software I work in every day, and how deeply I work in each one.</p>
+        </div>
+
+        <ul class="tools">
+          <li class="tool" data-reveal>
+            <div class="ring-wrap">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-track" cx="50" cy="50" r="44"/>
+                <circle class="ring-fill" cx="50" cy="50" r="44" style="--value:.95"/>
+              </svg>
+              <span class="ring-mark" aria-hidden="true">Ps</span>
+            </div>
+            <h3>Adobe Photoshop</h3>
+          </li>
+          <li class="tool" data-reveal>
+            <div class="ring-wrap">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-track" cx="50" cy="50" r="44"/>
+                <circle class="ring-fill" cx="50" cy="50" r="44" style="--value:.9"/>
+              </svg>
+              <span class="ring-mark" aria-hidden="true">Ai</span>
+            </div>
+            <h3>Adobe Illustrator</h3>
+          </li>
+          <li class="tool" data-reveal>
+            <div class="ring-wrap">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-track" cx="50" cy="50" r="44"/>
+                <circle class="ring-fill" cx="50" cy="50" r="44" style="--value:.82"/>
+              </svg>
+              <span class="ring-mark" aria-hidden="true">Id</span>
+            </div>
+            <h3>Adobe InDesign</h3>
+          </li>
+          <li class="tool" data-reveal>
+            <div class="ring-wrap">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-track" cx="50" cy="50" r="44"/>
+                <circle class="ring-fill" cx="50" cy="50" r="44" style="--value:.88"/>
+              </svg>
+              <span class="ring-mark" aria-hidden="true">Fg</span>
+            </div>
+            <h3>Figma</h3>
+          </li>
+          <li class="tool" data-reveal>
+            <div class="ring-wrap">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-track" cx="50" cy="50" r="44"/>
+                <circle class="ring-fill" cx="50" cy="50" r="44" style="--value:.85"/>
+              </svg>
+              <span class="ring-mark" aria-hidden="true">Cv</span>
+            </div>
+            <h3>Canva</h3>
+          </li>
+          <li class="tool" data-reveal>
+            <div class="ring-wrap">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-track" cx="50" cy="50" r="44"/>
+                <circle class="ring-fill" cx="50" cy="50" r="44" style="--value:.7"/>
+              </svg>
+              <span class="ring-mark" aria-hidden="true">Ae</span>
+            </div>
+            <h3>Adobe After Effects</h3>
+          </li>
+          <li class="tool" data-reveal>
+            <div class="ring-wrap">
+              <svg viewBox="0 0 100 100" aria-hidden="true">
+                <circle class="ring-track" cx="50" cy="50" r="44"/>
+                <circle class="ring-fill" cx="50" cy="50" r="44" style="--value:.6"/>
+              </svg>
+              <span class="ring-mark" aria-hidden="true">Bl</span>
+            </div>
+            <h3>Blender</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 6: EXPERIENCE ============ -->
+    <section id="experience" class="section" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="exp-title" class="section-title">Experience</h2>
+          <p class="demo-note">Sample timeline. Companies, roles and dates are fictional and easy to replace in index.html.</p>
+        </div>
+
+        <ol class="timeline">
+          <li data-reveal>
+            <p class="tl-date">2023 to 2024</p>
+            <div>
+              <h3>Brand Designer</h3>
+              <p class="tl-company">Brightwell Creative (demo)</p>
+              <p>Built identity systems and launch campaigns for food, retail and wellness clients, working closely with account teams from brief to final delivery.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <p class="tl-date">2024 to 2025</p>
+            <div>
+              <h3>Visual Designer</h3>
+              <p class="tl-company">Pelican and Pine Agency (demo)</p>
+              <p>Designed posters, packaging and social systems across a portfolio of seven clients, and set up shared templates that cut production time by a third.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <p class="tl-date">2025 to 2026</p>
+            <div>
+              <h3>Senior Graphic Designer</h3>
+              <p class="tl-company">Kiln House Studio (demo)</p>
+              <p>Led a small design team on editorial and identity projects, mentored junior designers, and presented concepts directly to founders and marketing leads.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 7: TESTIMONIALS ============ -->
+    <section id="testimonials" class="section" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <h2 id="testimonials-title" class="section-title">Kind words</h2>
+          <p class="demo-note">Sample testimonials for demonstration. Replace them with real client feedback.</p>
+        </div>
+
+        <div class="quotes" data-reveal>
+          <figure>
+            <blockquote><p>Aswin turned a vague idea into a brand we could explain in one sentence. Sales packaging started selling before the product did.</p></blockquote>
+            <figcaption><strong>Maya Chen</strong>Founder, Northwind Coffee (demo)</figcaption>
+          </figure>
+          <figure>
+            <blockquote><p>Every deliverable arrived print-ready and on time. The guidelines he wrote are still the first thing our team opens.</p></blockquote>
+            <figcaption><strong>Daniel Okafor</strong>Marketing Lead, Tidewater Architecture (demo)</figcaption>
+          </figure>
+          <figure>
+            <blockquote><p>He has a rare balance of restraint and daring. Our festival poster was the one people photographed and shared the most.</p></blockquote>
+            <figcaption><strong>Priya Raman</strong>Director, Halcyon Festival (demo)</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 8: CONTACT ============ -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-intro" data-reveal>
+          <h2 id="contact-title" class="section-title">Let us start a conversation.</h2>
+          <p>Tell me about the project, the audience and the timeline. I reply to every message within two working days.</p>
+
+          <ul class="contact-methods">
+            <li>
+              <span>Email</span>
+              <a href="mailto:hello@example.com">hello@example.com</a>
+            </li>
+            <li>
+              <span>WhatsApp</span>
+              <a href="https://wa.me/910000000000" target="_blank" rel="noopener">Message on WhatsApp</a>
+            </li>
+            <li>
+              <span>LinkedIn</span>
+              <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">Profile</a>
+            </li>
+            <li>
+              <span>Instagram</span>
+              <a href="https://www.instagram.com/your-handle" target="_blank" rel="noopener">Profile</a>
+            </li>
+            <li>
+              <span>Behance</span>
+              <a href="https://www.behance.net/your-profile" target="_blank" rel="noopener">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+
+        <form id="contact-form" class="contact-form" novalidate data-reveal>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+            <p class="field-error" id="name-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+            <p class="field-error" id="email-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" required aria-describedby="subject-error">
+            <p class="field-error" id="subject-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+            <p class="field-error" id="message-error" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn btn-solid btn-submit">Send message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <h2 class="footer-title" id="footer-title" aria-label="Let's work together.">LET'S WORK TOGETHER.</h2>
+
+      <ul class="footer-links">
+        <li><a href="mailto:hello@example.com">Email</a></li>
+        <li><a href="https://wa.me/910000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/your-handle" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.behance.net/your-profile" target="_blank" rel="noopener">Behance</a></li>
+      </ul>
+
+      <p class="copyright">&copy; <span id="year">2026</span> Aswin. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ PROJECT PRESENTATION (full screen) ============ -->
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="project-title">
+    <div class="project-inner">
+      <div class="project-bar">
+        <p class="project-cat" id="project-cat"></p>
+        <button type="button" class="project-close" id="project-close">Close</button>
+      </div>
+      <div id="project-body"></div>
+    </div>
+  </dialog>
+
+</body>
+</html>
